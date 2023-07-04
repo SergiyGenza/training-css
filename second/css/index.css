@@ -1,0 +1,207 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import "/resourses/fonts/Gilroy/stylesheet.css";
+@import "elements.css";
+@import "media.css";
+/* font-family: 'Work Sans', sans-serif;  */
+/* font-family: 'Gilroy', sans-serif;  */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Gilroy", sans-serif;
+}
+.container {
+  max-width: 1750px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container__slider {
+  padding-left: calc((100% - 1750px) / 2 + 15px);
+  overflow: hidden;
+}
+.header {
+  min-height: 100vh;
+  background-color: #eaf3f6;
+  background-image: url("/resourses/header/header-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.header__top {
+  padding: 44px 0;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 118px;
+}
+.nav__btn {
+  display: none;
+}
+.nav__list__link {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 36px;
+}
+.link {
+  color: #114455;
+}
+.nav__list__btn {
+  display: flex;
+  gap: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--teal, #145);
+  padding: 12px 24px;
+}
+.header {
+  position: relative;
+}
+.header__content {
+  margin-top: 170px;
+}
+.header__content__title {
+  color: #145;
+  max-width: 734px;
+}
+.header__content__text {
+  color: var(--dark-grey, #1f1f1f);
+  font-size: 34px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.68px;
+  margin-top: 48px;
+}
+.header__content__btn {
+  background-color: #114455;
+  display: flex;
+  gap: 16px;
+  border-radius: 2px;
+  padding: 14px 32px;
+  margin-top: 72px;
+  width: 197px;
+}
+.header__contetnt__mobile {
+  display: none;
+}
+.header__arrows {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.case-studies {
+  padding: 184px 0;
+}
+.case-studies__title {
+  color: #1f1f1f;
+  margin-bottom: 12px;
+}
+.case-studies__text {
+  max-width: 1076px;
+  margin-bottom: 100px;
+}
+/* slider */
+.slider-item {
+  position: relative;
+  display: inline-block;
+  padding-left: 80px;
+  margin-right: 150px;
+}
+.slide__title {
+  position: absolute;
+  left: 0;
+  bottom: 104px;
+  font-size: 140px;
+  font-weight: 400;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 68, 85, 1) 80px,
+    rgba(255, 255, 255, 1) 80px
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.slider__wrapper {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  position: relative;
+  width: 200%;
+}
+
+.slide-track {
+  display: flex;
+  flex-direction: row;
+  animation: scroll 40s linear infinite;
+  width: 200%;
+  transform: translate(0, -50%);
+}
+/* invoriem */
+.invoriem {
+  padding-bottom: 144px;
+}
+.invoriem__title {
+  margin-bottom: 12px;
+}
+.invoriem__text {
+  margin-bottom: 78px;
+}
+.invoriem__video {
+  position: relative;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.video::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 19px;
+  width: 100%;
+  height: 98%;
+  background-color: rgb(17, 68, 85, 0.5);
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.invoriem__video__btn {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* footer  */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 0;
+}
+.footer__copyright {
+  color: var(--dark-grey, #1f1f1f);
+  font-size: 20px;
+  line-height: 36px;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 104px;
+}
+.footer__email {
+  color: var(--dark-grey, #1f1f1f);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.footer__social {
+  display: flex;
+  gap: 26.3px;
+}

@@ -1,0 +1,54 @@
+.btn {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 36px;
+  color: #114455;
+}
+.title {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.text {
+  color: var(--dark-grey, #1f1f1f);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 44px;
+}
+.btn__dark {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 36px;
+}
+.opacity {
+  opacity: 0.699999988079071;
+}
+.none {
+	display: none !important;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-700px * 5));
+  }
+}
+@keyframes mobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-257.5px * 5));
+  }
+}
+@keyframes tablet {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-403.5px * 5));
+  }
+}
