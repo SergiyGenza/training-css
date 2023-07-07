@@ -1,0 +1,22 @@
+@mixin decorNumber {
+  position: absolute;
+  top: 0;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: $font-accent;
+  @include mediaTablet {
+    display: none;
+  }
+}
+
+@mixin mediaTablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mediaMobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}

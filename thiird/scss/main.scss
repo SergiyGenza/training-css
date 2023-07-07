@@ -1,0 +1,14 @@
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base//base";
+
+//blocks
+@import "./blocks/header";
+@import "./blocks/info";
+@import "./blocks/apartmets";
+@import "./blocks/contact-us";
+@import "./blocks/video";
+@import "./blocks/map";
+@import "./blocks/feedback";
+@import "./blocks/footer";

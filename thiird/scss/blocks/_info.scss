@@ -1,0 +1,55 @@
+.benefit {
+  position: relative;
+
+  &::after {
+    content: "II";
+    top: 0;
+    left: calc(50% + 555px);
+    transform: translate(-50%, 0%);
+    @include decorNumber;
+  }
+}
+.info {
+  display: flex;
+  gap: 70px;
+
+  @include mediaTablet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 53px;
+
+    color: $white;
+    text-align: center;
+    font-size: 20px;
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 27px;
+
+    @include mediaTablet {
+      font-size: 16px;
+    }
+    
+    &__text {
+      // width: 193px;
+    }
+  }
+}
+
+.icon {
+  &__info {
+    width: 80px;
+    height: 80px;
+    @include mediaTablet {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

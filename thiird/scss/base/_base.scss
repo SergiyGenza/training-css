@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
+
+body {
+  font-family: $font-main;
+  background-color: $dark;
+  color: $white;
+  font-size: 16px;
+}
+
+a {
+  color: $white;
+  transition: color 0.2s ease-in;
+}
+
+.container {
+  max-width: 1140px;
+  // ????????
+  padding: 0 15px;
+  // ????????
+  margin: 0 auto;
+}
+
+.container-info {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 840px;
+  padding: 120px 0 120px 0;
+}
+
+.container-video {
+}
+
+.title {
+  font-size: 36px;
+  color: $accent;
+  font-family: $font-accent;
+  font-weight: 400;
+  line-height: normal;
+
+  @include mediaTablet {
+    font-size: 28px;
+  }
+}
+
+.logo {
+}
+
+.none {
+  display: none;
+}
+
+/* Nav Icon */
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #fff;
+
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  left: 0;
+
+  width: var(--width);
+  height: var(--line-height);
+
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+  transform: rotate(-45deg);
+}
