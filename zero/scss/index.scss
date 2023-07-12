@@ -1,0 +1,9 @@
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base//base";
+
+//sections
+@import "./sections/header";
+@import "./sections/project";
+@import "./sections/footer";

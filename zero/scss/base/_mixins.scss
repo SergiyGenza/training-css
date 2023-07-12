@@ -1,0 +1,31 @@
+// fonts
+@mixin DM-bold {
+  font-family: $font-main;
+  font-weight: 700;
+}
+
+@mixin DM-medium {
+  font-family: $font-main;
+  font-weight: 500;
+}
+
+@mixin DM-regular {
+  font-family: $font-main;
+  font-weight: 400;
+}
+
+@mixin Poppins-bold {
+  font-family: $font-accent;
+  font-weight: 700;
+}
+
+@mixin Poppins-medium {
+  font-family: $font-accent;
+  font-weight: 500;
+}
+
+@mixin Poppins-regular {
+  font-family: $font-accent;
+  font-weight: 340;
+}
+
