@@ -8,9 +8,6 @@ body {
   font-family: "Gilroy", sans-serif;
   background: var(--BG, #0b1d26);
   color: var(--secondary);
-
-  /* Shadow */
-  /* box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.2); */
 }
 
 h1 {
@@ -22,6 +19,7 @@ h1 {
   max-width: 1920px;
   padding: 64px 80px 0 80px;
   margin: 0 auto;
+  position: relative;
 }
 
 .header {
@@ -30,6 +28,53 @@ h1 {
     rgba(11, 29, 38, 0) 31.06%,
     #0b1d26 108.93%
   ); */
+}
+
+.nav-bar {
+  position: absolute;
+  right: 0;
+  padding: var(--gap) 80px 0 80px;
+}
+
+.nav-bar > ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  padding-right: 32px;
+}
+
+.nav-bar > ul::after {
+  position: absolute;
+  content: "";
+  border-right: 2px solid var(--secondary);
+  height: 240px;
+  opacity: 0.4;
+  right: -0px;
+  top: -24px;
+}
+
+.nav-bar > ul > li {
+  color: #fff;
+  /* text-align: right; */
+  /* font-family: Gilroy; */
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  z-index: 1000;
+  border-right: 2px solid var(--secondary);
+  right: -32px;
+  top: -24px;
+  height: 56px;
 }
 
 .header-top {
@@ -56,7 +101,7 @@ ul {
 }
 
 .slogan {
-  margin-top: 200px;
+  margin-top: var(--gap);
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -71,10 +116,11 @@ ul {
 .slogan-content {
   font-size: 88px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 100px; /* 113.636% */
   text-transform: capitalize;
   max-width: 950px;
+  /* height: 200px; */
   font-family: "Chronicle Display";
 }
 
@@ -161,6 +207,7 @@ ul {
   top: -120px;
   left: -175px;
 }
+
 .third::before {
   font-family: "Gilroy", sans-serif;
   position: absolute;
@@ -177,7 +224,7 @@ ul {
 .card-title {
   font-family: "Chronicle Display";
   font-size: 64px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .card-content {
@@ -187,6 +234,10 @@ ul {
 
 .card-footer {
   color: var(--primary);
+}
+
+.card-footer > img {
+  margin-left: 16px;
 }
 
 .preview {
