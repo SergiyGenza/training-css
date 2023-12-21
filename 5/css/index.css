@@ -4,23 +4,20 @@
 @import "/resourses/fonts/Gilroy/stylesheet.css";
 
 .container {
-  position: relative;
   max-width: 1920px;
   padding: 64px 80px 0 80px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 77px;
-  grid-template-rows: 90px 610px 1fr;
-  gap: 0px 2rem;
-  grid-template-areas:
-    "head head head"
-    "slogan slogan nav"
-    "content content nav"
-    "footer footer footer";
 }
 
-header {
-  grid-area: head;
+main {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(1462px, 1fr) 77px;
+  grid-template-rows: 610px 1fr;
+  gap: 0px 2rem;
+  grid-template-areas:
+    "slogan nav"
+    "content nav";
 }
 
 div > .slogan-wrapper {
@@ -41,9 +38,9 @@ div > .container-content {
   padding-top: calc(var(--gap) / 2 + 20px);
 }
 
-footer {
+/* footer {
   grid-area: footer;
-}
+} */
 
 .header-top {
   font-weight: 700;
@@ -174,6 +171,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 200px;
+  max-width: 1462px;
 }
 
 .block {
@@ -273,7 +271,7 @@ ul {
   height: 720px;
 }
 
-footer {
+.footer-wrapper {
   padding: 0 0 120px 0;
   display: grid;
   grid-template-columns: 1fr 193px 161px;
@@ -283,6 +281,12 @@ footer {
 .info-column {
   display: grid;
   gap: 16px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .info-column > img {
