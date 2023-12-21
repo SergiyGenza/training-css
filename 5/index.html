@@ -11,8 +11,8 @@
 
 <body>
   <div class="container">
-    <header>
-      <div class="header-top">
+    <header class="header">
+      <div class="header-top" id="start">
         <nav>
           <img src="/assets/logo.png" alt="logo">
           <ul>
@@ -27,17 +27,19 @@
         </nav>
       </div>
     </header>
+
     <div class="nav-bar">
       <ul>
-        <li >Start</li>
-        <li >01</li>
-        <li class="active">02</li>
-        <li >03</li>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#section-1">01</a></li>
+        <li><a href="#section-2">02</a></li>
+        <li><a href="#section-3">03</a></li>
       </ul>
     </div>
+
     <div class="slogan-wrapper">
       <div class="slogan">
-        <div class="slogan-top head-title">
+        <div class="slogan-top head-title" id="start">
           <span>A Hiking guide</span>
         </div>
         <div class="slogan-content">
@@ -49,79 +51,79 @@
         </div>
       </div>
     </div>
-    <main>
-      <div class="container-content">
-        <div class="block ">
-          <div class="card first">
-            <div class="head-title">
-              <span>get started</span>
-            </div>
-            <div class="card-title">
-              What level of hiker are you?
-            </div>
-            <div class="card-content">
-              Determining what level of hiker you are can be an important tool when planning future hikes. This hiking
-              level guide
-              will help you plan hikes according to different hike ratings set by various websites like All Trails and
-              Modern Hiker.
-              What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?
-            </div>
-            <div class="card-footer">
-              read more
-              <img src="/assets/icon-arrow-right.svg" alt="icon arrow right">
-            </div>
-          </div>
-          <img class="preview" src="/assets/01.png" alt="preview">
-        </div>
 
-        <div class="block reverse ">
-          <div class="card second">
-            <div class="head-title">
-              <span>Hiking Essentials</span>
-            </div>
-            <div class="card-title">
-              Picking the right Hiking Gear!
-            </div>
-            <div class="card-content">
-              The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get
-              away with
-              things you already have.
-              Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes,
-              which will get
-              heavy and chafe wif they get sweaty or wet.
-            </div>
-            <div class="card-footer">
-              read more
-              <img src="/assets/icon-arrow-right.svg" alt="icon arrow right">
-            </div>
+    <div class="container-content">
+      <div class="block" id="section-1">
+        <div class="card first">
+          <div class="head-title">
+            <span>get started</span>
           </div>
-          <img class="preview" src="/assets/02.png" alt="preview">
-        </div>
-
-        <div class="block ">
-          <div class="card third">
-            <div class="head-title">
-              <span>where you go is the key</span>
-            </div>
-            <div class="card-title">
-              Understand Your Map & Timing
-            </div>
-            <div class="card-content">
-              To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the
-              guide, study
-              the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For
-              example, I’ll
-              read the guide and know that say, in a mile, I make a right turn at the junction..
-            </div>
-            <div class="card-footer">
-              read more
-              <img src="/assets/icon-arrow-right.svg" alt="icon arrow right">
-            </div>
+          <div class="card-title">
+            What level of hiker are you?
           </div>
-          <img class="preview" src="/assets/03.png" alt="preview">
+          <div class="card-content">
+            Determining what level of hiker you are can be an important tool when planning future hikes. This hiking
+            level guide
+            will help you plan hikes according to different hike ratings set by various websites like All Trails and
+            Modern Hiker.
+            What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?
+          </div>
+          <div class="card-footer">
+            read more
+            <img src="/assets/icon-arrow-right.svg" alt="icon arrow right">
+          </div>
         </div>
+        <img class="preview" src="/assets/01.png" alt="preview">
       </div>
-    </main>
+
+      <div class="block reverse" id="section-2">
+        <div class="card second">
+          <div class="head-title">
+            <span>Hiking Essentials</span>
+          </div>
+          <div class="card-title">
+            Picking the right Hiking Gear!
+          </div>
+          <div class="card-content">
+            The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get
+            away with
+            things you already have.
+            Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes,
+            which will get
+            heavy and chafe wif they get sweaty or wet.
+          </div>
+          <div class="card-footer">
+            read more
+            <img src="/assets/icon-arrow-right.svg" alt="icon arrow right">
+          </div>
+        </div>
+        <img class="preview" src="/assets/02.png" alt="preview">
+      </div>
+
+      <div class="block" id="section-3">
+        <div class="card third">
+          <div class="head-title">
+            <span>where you go is the key</span>
+          </div>
+          <div class="card-title">
+            Understand Your Map & Timing
+          </div>
+          <div class="card-content">
+            To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the
+            guide, study
+            the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For
+            example, I’ll
+            read the guide and know that say, in a mile, I make a right turn at the junction..
+          </div>
+          <div class="card-footer">
+            read more
+            <img src="/assets/icon-arrow-right.svg" alt="icon arrow right">
+          </div>
+        </div>
+        <img class="preview" src="/assets/03.png" alt="preview">
+      </div>
+    </div>
+
     <footer>
       <div class="info">
         <div class="info-column">
@@ -163,7 +165,6 @@
       </div>
     </footer>
   </div>
-
 
   <script src="/js/index.js"></script>
 </body>

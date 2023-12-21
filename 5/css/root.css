@@ -4,3 +4,11 @@
   --BG: #0b1e28;
   --gap: 200px;
 }
+
+html,
+body {
+  font-family: "Gilroy", sans-serif;
+  background: var(--BG, #0b1d26);
+  color: var(--secondary);
+  scroll-behavior: smooth;
+}

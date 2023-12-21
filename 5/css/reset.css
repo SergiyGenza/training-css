@@ -14,11 +14,14 @@
 /* Links */
 
 a, a:link, a:visited  {
-    text-decoration: none;
+	text-decoration: none;
+	color: var(--secondary);
 }
 
 a:hover  {
-    text-decoration: none;
+	text-decoration: none;
+	color: var(--primary);
+	transition: 0.3s;
 }
 
 /* Common */

@@ -3,26 +3,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 @import "/resourses/fonts/Gilroy/stylesheet.css";
 
-html,
-body {
-  font-family: "Gilroy", sans-serif;
-  background: var(--BG, #0b1d26);
-  color: var(--secondary);
-}
-
-h1 {
-  color: red;
-  font-size: 88px;
-}
-
 .container {
+  position: relative;
   max-width: 1920px;
   padding: 64px 80px 0 80px;
   margin: 0 auto;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 77px;
+  grid-template-rows: 90px 610px 1fr;
+  gap: 0px 2rem;
+  grid-template-areas:
+    "head head head"
+    "slogan slogan nav"
+    "content content nav"
+    "footer footer footer";
 }
 
-.header {
+header {
+  grid-area: head;
+}
+
+div > .slogan-wrapper {
+  grid-area: slogan;
+}
+
+div > .container-content {
+  grid-area: content;
+}
+
+.nav-bar {
+  grid-area: nav;
+  align-items: start;
+  grid-row: 1 / 2;
+  position: sticky;
+  top: 0;
+  margin-top: calc(var(--gap) / 1.5 + 160px / 2);
+  padding-top: calc(var(--gap) / 2 + 20px);
+}
+
+footer {
+  grid-area: footer;
+}
+
+.header-top {
+  font-weight: 700;
   /* background: linear-gradient(
     330deg,
     rgba(11, 29, 38, 0) 31.06%,
@@ -30,10 +54,16 @@ h1 {
   ); */
 }
 
-.nav-bar {
+.header-wrapper {
   position: absolute;
-  right: 0;
-  padding: var(--gap) 80px 0 80px;
+  background-image: linear-gradient(
+      330deg,
+      rgba(11, 29, 38, 0) 31.06%,
+      #0b1d26 108.93%
+    ),
+    url(/assets//bg-top.png);
+  height: 1080px;
+  height: 1920px;
 }
 
 .nav-bar > ul {
@@ -57,8 +87,7 @@ h1 {
 
 .nav-bar > ul > li {
   color: #fff;
-  /* text-align: right; */
-  /* font-family: Gilroy; */
+  font-family: "Gilroy", sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -75,10 +104,6 @@ h1 {
   right: -32px;
   top: -24px;
   height: 56px;
-}
-
-.header-top {
-  font-weight: 700;
 }
 
 nav {
@@ -110,7 +135,6 @@ ul {
 .slogan-wrapper {
   display: flex;
   justify-content: center;
-  height: 1080px;
 }
 
 .slogan-content {
@@ -120,7 +144,6 @@ ul {
   line-height: 100px; /* 113.636% */
   text-transform: capitalize;
   max-width: 950px;
-  /* height: 200px; */
   font-family: "Chronicle Display";
 }
 
@@ -158,6 +181,11 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 114px;
+  margin-top: var(--gap);
+}
+
+.block:last-child {
+  margin-bottom: var(--gap);
 }
 
 .reverse {
@@ -190,7 +218,7 @@ ul {
   font-size: 240px;
   font-style: normal;
   font-weight: 700;
-  line-height: 240px; /* 100% */
+  line-height: 240px;
   opacity: 0.1;
   top: -120px;
   left: -175px;
@@ -202,7 +230,7 @@ ul {
   font-size: 240px;
   font-style: normal;
   font-weight: 700;
-  line-height: 240px; /* 100% */
+  line-height: 240px;
   opacity: 0.1;
   top: -120px;
   left: -175px;
@@ -215,7 +243,7 @@ ul {
   font-size: 240px;
   font-style: normal;
   font-weight: 700;
-  line-height: 240px; /* 100% */
+  line-height: 240px;
   opacity: 0.1;
   top: -120px;
   left: -175px;
@@ -229,7 +257,7 @@ ul {
 
 .card-content {
   font-weight: 700;
-  line-height: 32px; /* 177.778% */
+  line-height: 32px;
 }
 
 .card-footer {
@@ -246,7 +274,7 @@ ul {
 }
 
 footer {
-  padding: 200px 0 120px 0;
+  padding: 0 0 120px 0;
   display: grid;
   grid-template-columns: 1fr 193px 161px;
   gap: 212px;
@@ -263,7 +291,7 @@ footer {
 
 .copyright {
   font-weight: 500;
-  line-height: 32px; /* 177.778% */
+  line-height: 32px;
   opacity: 0.5;
   margin-top: 112px;
 }
